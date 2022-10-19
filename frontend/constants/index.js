@@ -1,3 +1,3 @@
 import { PublicKey } from "@solana/web3.js";
 
-export const AIRBNB_PROGRAM_PUBKEY = new PublicKey("J5yzCZrNZJR6K5FUwwZ2SzjTvg8DzomcYqcaZJm27Y6v");
+export const AIRBNB_PROGRAM_PUBKEY = new PublicKey("E3JMhP143S5ujMBsqVdntMymUR2eEYsTTAJed7bx62DU");

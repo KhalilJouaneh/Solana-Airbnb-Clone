@@ -10,12 +10,15 @@ import EditListingModal from '../components/Listing/EditListingModal'
 import ReserveListingModal from '../components/Listing/ReserveListingModal'
 import { format } from 'date-fns'
 import { useWallet } from '@solana/wallet-adapter-react'
-
+import { useAirbnb } from '../hooks/useAirbnb'
 
 export default function Home() {
 
 
     const {connected, publicKey} = useWallet()
+    const {initialized, initializeUser} = useAirbnb()
+    
+
 
 
     const [showReservedListing, setShowReservedListing] = useState(false)
@@ -113,7 +116,7 @@ export default function Home() {
                 <title>Airbnb Clone</title>
             </Head>
 
-            <Header connected={connected} publicKey={publicKey} />
+            <Header connected={connected} publicKey={publicKey} initialized={initialized} initializeUser={initializeUser} />
             <main className="pt-10 pb-20">
                 <FilterMenu />
                 {connected && (
